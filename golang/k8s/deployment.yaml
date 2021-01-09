@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codeedu-webserver
+spec:
+  selector:
+    matchLabels:
+      app: codeedu-webserver
+  template:
+    metadata:
+      labels:
+        app: codeedu-webserver
+    spec:
+      containers:
+      - name: codeedu-webserver
+        image: felipebergamin/codeedu-go-webserver
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 8000
