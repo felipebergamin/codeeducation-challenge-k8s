@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Felipe R. Bergamin</title>
+      </head>
+      <body>
+        <h1>CodeEducation Rocks!</h1>
+      </body>
+    </html>
