@@ -1,0 +1,7 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    dir: golang
+    args:
+      - "test"
+    env:
+    - "GOPATH=1.15.6"
